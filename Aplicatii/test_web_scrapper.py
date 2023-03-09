@@ -1,3 +1,8 @@
+#!usr/bin/python3
+
+### Algorithm used to scrape a web page in a html file - version 2
+### apt-get install beautifoulsoup4 requests
+
 import requests
 from bs4 import BeautifulSoup
 from urllib import request, response, error, parse
@@ -29,8 +34,8 @@ f.close()
 f = open("test1.html", "a")
 # # # traverse paragraphs from soup
 for link in data:
-        raspuns_server = request.urlopen(link)
-        link_content = raspuns_server.read()
+        reply_server = request.urlopen(link)
+        link_content = reply_server.read()
         f.write("\n"+str(link_content))
         f.write("\n")
 f.close()
